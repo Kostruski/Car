@@ -137,9 +137,12 @@ var costController = (function() {
         selectCar.remove(selectCar.selectedIndex);
         localStorage.removeItem(val.value);
         localStorage.setItem("cars", JSON.stringify(carNames));
-        console.log(val.value)
-        console.log(localStorage.length)
         carNames.splice(scr,1)
+        if(carNames.length<1) {
+          document.getElementById('submitSaveCar').disabled="true";
+          document.getElementById('removeSaveCar').disabled="true";
+        }
+
     },
     
     
