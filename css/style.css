@@ -417,7 +417,8 @@ input {
     z-index: 2;
     background-color: whitesmoke;  
     width: 240px;
-    height: 240px 
+    height: 240px;
+    display: none;
 }
 
 #buttonWrap {
