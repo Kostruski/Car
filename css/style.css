@@ -1,0 +1,456 @@
+body {
+    background-color: whitesmoke ;
+    color: rgb(28, 29, 34);
+    text-align: center;
+    font-family: Lato;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: 0px;
+    }
+
+
+
+#wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 98vw;
+    height: 98vh;  
+    min-width: 320px;
+    z-index: -100;
+    opacity: 1;
+    
+  
+}
+button,
+#submitNewCar,
+#submitNewCost {
+    font-family: Lato;
+    color: rgb(28, 29, 34);
+    margin-top: 2%;
+    margin-left: 3%;
+    text-transform: uppercase;
+}
+
+
+#menu {
+    display:flex;
+    justify-content: start;
+    margin-top: 3%;
+    padding-bottom: 3%;
+     
+    }
+.columnWrapper {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 1%;
+    margin-top: 1%;   
+ 
+}
+
+#leftColumn {
+    position: relative;
+    width: 28%;
+    min-width: 320px;
+    height: 100%;
+    padding: 1%;
+    
+}
+
+#rightColumn {
+    right: 0px;
+    width: 68%;
+    min-width: 320px;
+    padding: 1%;          
+}
+
+@media only screen and (max-width: 1160px) {
+#leftColumn,    
+#rightColumn    
+    {
+      width: 100%;
+    }
+  }
+
+
+
+
+#ColumnTop {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rightColumnTopEl {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;  
+    flex-wrap: wrap;
+    border-radius: 3px;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+}
+
+.leftColumnBlockEl {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;  
+    
+
+}
+
+.rightColumnBlockamin,
+.rightColumnBlock {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(46, 46, 250);
+    color: whitesmoke;
+    border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    margin-bottom: 2%;   
+}
+.rightColumnBlockRedamin,
+.rightColumnBlockRed {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(238, 13, 24);
+    color: whitesmoke;
+    border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    margin-bottom: 2%;   
+}
+.rightColumnBlockYellowamin,
+.rightColumnBlockYellow {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(236, 214, 17);
+    color: rgb(28, 29, 34);
+    border-radius: 3px;
+    border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    margin-bottom: 2%;   
+}
+
+.icon-minus-circle {
+   transition: 0.5s;
+}
+
+.icon-minus-circle:hover {
+    font-size: 1.5em;
+}
+
+.icon-cancel-circle {
+   float:right;
+ }
+
+
+
+
+
+#itemLongDescription {
+   display: none;
+}
+
+.description {
+    width: 60%;
+}
+
+.description:hover #itemLongDescription {
+    display: block;
+}
+
+
+.currentEl,
+.dispTot {
+    width: 30%;
+    margin-left: 5%;
+}
+
+.currentEl,
+.dispTot,
+.dispTotTopRow {
+   
+   border: 1px solid rgb(28, 29, 34);
+   border-radius: 3px;
+   background-color: rgb(28, 29, 34);
+   color: whitesmoke;
+   padding: 1%;
+   margin-right: 1%;
+   margin-bottom: 1%;
+   min-width: 2em;
+   } 
+
+
+
+.leftColumnBlock {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    padding: 1%;
+    position: relative;
+   }
+
+.carSum {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.carSum p {
+        width: 50%;
+        text-align: left;
+        }
+select,
+input {
+    width: 50%;
+    text-align: center;
+    height: 2em;
+    border-radius: 3px;
+    box-shadow: none; 
+    border: 1px solid rgb(28, 29, 34);  
+    font-family: Lato;
+    text-transform: uppercase;
+   
+
+}
+
+#addCurrentValue {
+    width: 100%;
+    margin: 0;
+    background-color:rgb(28, 29, 34);
+    color: whitesmoke;
+    font-family: Lato;
+    padding: 0;
+    font-size: 16px;
+    height: 91%;
+}
+
+.dispCurrent {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#carValuePic {
+    padding: 3%;
+}
+
+
+
+  p {
+      width: 70%;
+      text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 1%;
+      margin-right: 1%;
+  }
+
+  #carValue {
+      margin-top: 3%;
+      margin-bottom: 3%;
+  }
+
+  #carChart {
+    margin-top: 3%; 
+    margin-bottom: 3%;
+
+  }
+  
+  #start,
+  #addCar,
+  #addCost {
+          
+      font-family: Lato;  
+      width: 320px;
+      height: auto;
+      border: 1px solid rgb(28, 29, 34);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    box-shadow: 0px 0px 8px 2px rgba(10,11,13,0.42);
+    padding: 1%;    
+    border-radius: 3px;  
+   
+  }
+  .addCarSum,
+  .addCostItem {
+      width: 100%;
+      }
+    
+
+
+      .addCarSum p,
+      .addCostItem p {
+        display: block;
+        text-align: center;
+        width: 100%;
+        }
+
+    #fullDescription {
+        border-radius: 3px;
+        box-shadow: none; 
+        border: 1px solid rgb(28, 29, 34);  
+        width: 80%; 
+        font-size: 16px;  
+          }
+    
+    .submitBtn {
+        width: 30%;
+    }      
+
+    @media only screen and (min-width: 600px) {
+        #addCost,
+        #addCar  
+
+            {
+              width: 600px;
+            }
+     
+          }
+    input:invalid
+    {
+        background-color: rgb(224, 176, 176);
+        
+    }
+
+    #addCost {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        background-color: whitesmoke;
+       
+    }
+
+    #carSummary {
+        
+       
+        position: relative;
+        background-color: whitesmoke;
+        z-index: 2;
+        
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0px;
+        bottom: -400px;
+        left: -30px;
+        right: -30px;
+        opacity: 0.9;
+        z-index: 0;
+        background-color: whitesmoke;
+        display: block;
+     
+    }
+
+  
+
+#carBackground {
+    background-color: red;
+    position: absolute;
+    bottom: 6%;
+    left: 1%;
+    right: 1%;
+    z-index: -1;
+    height: 90%;
+    border-top: 1px solid rgb(61, 4, 7);
+    
+
+}
+ #picWrapp {
+     position: relative;
+ }
+       
+  #carValuePic img {
+      opacity: 1;
+      position: relative;
+      width: 100%;
+      height: auto;
+    
+      
+  } 
+
+  #carValuePic {
+    position: relative;
+} 
+
+#wrapStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    height: 100%;
+    width: 100%
+}
+
+#start {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    background-color: whitesmoke;  
+    width: 240px;
+    height: 240px 
+}
+
+#buttonWrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly; 
+}
+
+#selectCar {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-self: center; 
+    
+}
+
+#newCar {
+    border: 1px solid rgb(28, 29, 34);
+    padding: 1%;    
+    border-radius: 3px;
+    flex-direction: row;
+    width: 50%;
+    align-self: center; 
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 0px
+      
+    
+
+}
+
+
+
+

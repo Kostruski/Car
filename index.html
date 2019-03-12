@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Car Expense</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="css/fontello.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="topwarpper"></div>
+            <div id="menu">
+                <button type="button" id="newCostBtn">ADD COST</button>
+            </div>
+            <div id="ColumnTop" class="ColumnTopBlock">
+                <div id="totExpenses" class="rightColumnTopEl">
+                        <p>Total expenses </p>
+                        <div id="dispTotExpensesn" class="dispTotTopRow">0</div>
+                </div>
+                <div id="totCostperKm" class="rightColumnTopEl">
+                        <p>Average cost per 1 km</p>
+                        <div id="dispTotCostPerKm" class="dispTotTopRow">0</div>
+                </div>
+                <div id="date" class="rightColumnTopEl">
+                        <p>Average cost per day</p>
+                        <div id="dispTotCostPerDay" class="dispTotTopRow">0</div>
+                </div>
+            </div>
+
+            <div class="columnWrapper">
+            <div id="leftColumn" class="column">
+                <div id="carSummary" class="leftColumnBlock">
+                     <div class="carSum"><p>CAR NAME</p><input name="car model"  maxlength="12" id="model" type="text" class="carSumEl" required autofocus></div> 
+                     <div class="carSum"><p>PURCHASE PRICE</p><input  name="price" min="0" max="999999999" id="price" type="number" class="carSumEl" required ></div> 
+                     <div class="carSum"><p>PURCHASE DATE</p><input name="purchase date"  placeholder="MMYYY" type="month" id="year" class="carSumEl" required ></div> 
+                     <div class="carSum"><p>ORGINAL MILEAGE</p><input name="orginal miles" min="0" max="999999999" id="mileage" class="carSumEl" required type="number" ></div> 
+                     <div class="carSum"><input name="submit car" type="submit" id="submitNewCar" class="carSumEl"></div> 
+                </div>
+                <div id="carValue" class="leftColumnBlock">
+                   <div id="carValuePic"> 
+                       <div id="picWrapp" ><img src="images/car.svg"><div id="carBackground"></div></div>
+                    </div>
+                    <div id="dispCurrentValue" class="dispCurrent"><p>current value</p><div class="currentEl"><input name="current car value" type="number" min="0" maxlength="9" id="addCurrentValue"></div></div>
+                    <div id="dispCurrentMileage" class="dispCurrent"><p>current mileage</p><div class="currentEl">2000</div></div>
+                </div>
+                <div id="carCostSum" class="leftColumnBlock">
+                    <div id="totInsu" class="leftColumnBlockEl">
+                        <p>Total isnurance and tax cost</p>
+                        <div id="dispTotInsu" class="dispTot">0</div>
+                    </div>
+                    <div id="totMaint" class="leftColumnBlockEl">
+                            <p>Total maitenance and repairs cost</p>
+                            <div id="dispTotMaint" class="dispTot">0</div>
+                    </div>
+                    <div id="totFuel" class="leftColumnBlockEl">
+                            <p>Total fuel cost</p>
+                            <div id="dispTotFuel" class="dispTot">0</div>
+                    </div>
+                </div>
+               <!-- <div id="carChart" class="leftColumnBlock"><img src="images/chart.png"></div> -->
+            </div>
+            <div id="rightColumn" class="column">              
+               
+                <div id="rightColumnRow" class="rightColumnBlock" style="display: none" >
+                    <div id="itemDate" class="rightColumnBlockElement">01/2012</div>
+                    <div id="itemMilage" class="rightColumnBlockElement">180000</div>
+                    <div class="description">
+                    <div id="itemDescription" class="rightColumnBlockElement">wymiana oleju</div>
+                    <div id="itemLongDescription" class="rightColumnBlockElement">długi opis</div>
+                    </div>
+                    <div id="itemValue" class="rightColumnBlockElement">500</div>
+                    <div id="removeIcon" class="icon-minus-circle": before></div>
+                 </div>
+                
+            </div>
+            <div id="overlay"></div>
+            </div>
+        </div>
+            <div id="addCost" style="display: none">
+                <div class="addCostItem"><div id="closeIcon1" class="icon-cancel-circle"></div></div> 
+                <div class="addCostItem"><p>DATE</p><input name="date" type="month" class="addCostInput" autofocus ></div> 
+                <div class="addCostItem"><p>MILEAGE</p><input name="miles"  min="0" max="999999999" type="number" class="addCostInput" ></div> 
+                <div class="addCostItem"><p>Short description</p><input type="text" name="short" class="addCostInput" placeholder="Short description" required></div> 
+                <div class="addCostItem"><p>Full description</p><textarea name="long" id="fullDescription" class="addCostInput" wrap="soft" rows="10" placeholder="Full Decrription"></textarea></div> 
+                <div class="addCostItem"><p>Value</p><input  name="value" min="0" max="999999999" class="addCostInput" required type="number"></div> 
+                <div class="addCostItem"><p>Select Type</p><select name="Cost type" class="addCostInput">
+                    <option value="Ins">Insurance & Tax</option>    
+                    <option value="Fuel" selected >Fuel</option>
+                    <option value="Maint">Maintenece & Repairs</option>    
+                </select>
+                </div>
+                <div class="addCostItem"><input name="submit" type="submit" id="submitNewCost" class="submitBtn"></div>
+            </div>
+            <div id="start">
+                <div id="wrapStart">
+                        <button id="newCar">NEW CAR</button>
+                    <select name="Saved cars" id="selectCar" class="addCostInput">
+
+
+                    </select>
+                    <div id="buttonWrap">
+                            <input name="submit" type="submit" id="submitSaveCar" value="submit" class="submitBtn">
+                            <input name="remove" type="button" id="removeSaveCar" value="remove" class="submitBtn">
+                    </div>                  
+                </div>             
+                    
+            </div> 
+        
+            
+            
+            
+            
+            
+            
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+       <script src="script.js"></script>
+    </body>
+</html>
